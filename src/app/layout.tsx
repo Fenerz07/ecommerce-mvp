@@ -1,4 +1,5 @@
 import React from 'react';
+import Header from '../components/header';
 
 export default function RootLayout({
   children,
@@ -8,6 +9,7 @@ export default function RootLayout({
   return (
     <html lang="fr">
       <body>
+        <Header />
         {children}
       </body>
     </html>
