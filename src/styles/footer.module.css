@@ -1,0 +1,43 @@
+.footer {
+    background-color: #191919;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footerContent {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footerLink a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.footerLink a:hover {
+    text-decoration: underline;
+}
+
+.footerBottom {
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.footerIcon {
+    margin-right: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.footerIcon:hover {
+    color: #ddd;
+}
+
+.footerCopyright {
+    margin-left: 10px;
+}
