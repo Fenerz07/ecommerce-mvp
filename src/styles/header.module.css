@@ -1,5 +1,4 @@
 .header {
-    color: #fff;
     position: absolute;
     top: 0;
     left: 0;
@@ -10,10 +9,35 @@
     padding: 0 20px;
     box-sizing: border-box;
     z-index: 10;
+    color: #fff;
+}
+
+.burgerMenu {
+    cursor: pointer;
 }
 
 .logo {
     padding-left: 120px;
+}
+
+.nav {
+    display: none;
+    flex-direction: column;
+    align-items: left;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 9;
+}
+
+.nav.open {
+    display: flex;
+}
+
+.navLink {
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
 }
 
 .cartAndConnect {
@@ -27,4 +51,8 @@
 .cart p {
     margin: 0;
     margin-left: 20px;
+}
+
+.connect {
+    margin-left: 10px;
 }
