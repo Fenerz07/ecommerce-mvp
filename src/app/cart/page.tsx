@@ -2,9 +2,9 @@ import styles from '../../styles/links/cart.module.css';
 import Image from 'next/image';
 
 const cartItems = [
-    { id: 1, name: 'LetterBag', price: 29.99, quantity: 1, image: '/bag.jpg' },
-    { id: 2, name: 'BloomToy', price: 49.99, quantity: 2, image: '/toy.jpg' },
-    { id: 3, name: 'BloomShirt', price: 19.99, quantity: 1, image: '/tshirt.jpg' },
+    { id: 1, name: 'LetterBag', price: 29.99, quantity: 1, image: '/bag.png' },
+    { id: 2, name: 'BloomToy', price: 49.99, quantity: 2, image: '/toy.png' },
+    { id: 3, name: 'BloomShirt', price: 19.99, quantity: 1, image: '/tshirt.png' },
 ];
 
 export default function Cart() {

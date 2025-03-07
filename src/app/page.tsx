@@ -1,10 +1,11 @@
 import styles from '../styles/home.module.css';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const products = [
-  { src: '/toy.jpg', alt: 'Product1', title: 'BloomToy', price: 'PRIX' },
-  { src: '/bag.jpg', alt: 'Product2', title: 'LetterBag', price: 'PRIX' },
-  { src: '/tshirt.jpg', alt: 'Product3', title: 'BloomShirt', price: 'PRIX' },
+  { src: '/toy.png', alt: 'Product1', title: 'BloomToy', price: 'PRIX' },
+  { src: '/bag.png', alt: 'Product2', title: 'LetterBag', price: 'PRIX' },
+  { src: '/tshirt.png', alt: 'Product3', title: 'BloomShirt', price: 'PRIX' },
 ];
 
 const nouveautes = [
@@ -53,9 +54,11 @@ export default function Home() {
       <div className={styles.products}>
         {products.map((product, index) => (
           <div key={index} className={styles.product}>
-            <Image src={product.src} alt={product.alt} width={300} height={300} />
-            <h2>{product.title}</h2>
-            <p>{product.price}</p>
+            <Link href={`/products/${product.title.toLowerCase()}`} passHref>
+              <Image src={product.src} alt={product.alt} width={300} height={300} />
+              <h2>{product.title}</h2>
+              <p>{product.price}</p>
+            </Link>
           </div>
         ))}
       </div>

@@ -6,7 +6,7 @@ export default function LetterBag() {
     <div className={styles.productContainer}>
       <h1>LetterBag</h1>
       <div className={styles.productDetails}>
-        <Image src="/bag.jpg" alt="LetterBag" width={500} height={500} className={styles.productImage} />
+        <Image src="/bag.png" alt="LetterBag" width={500} height={500} className={styles.productImage} />
         <div className={styles.productInfo}>
           <p className={styles.productDescription}>
             LetterBag est un sac élégant et pratique, parfait pour transporter vos affaires quotidiennes. Fabriqué avec des matériaux de haute qualité, ce sac est durable et stylé.

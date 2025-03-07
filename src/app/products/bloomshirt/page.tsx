@@ -6,7 +6,7 @@ export default function BloomShirt() {
     <div className={styles.productContainer}>
       <h1>BloomShirt</h1>
       <div className={styles.productDetails}>
-        <Image src="/tshirt.jpg" alt="BloomShirt" width={500} height={500} className={styles.productImage} />
+        <Image src="/tshirt.png" alt="BloomShirt" width={500} height={500} className={styles.productImage} />
         <div className={styles.productInfo}>
           <p className={styles.productDescription}>
             BloomShirt est un t-shirt confortable et stylé, parfait pour toutes les occasions. Fabriqué avec des matériaux de haute qualité, ce t-shirt est doux et durable.
