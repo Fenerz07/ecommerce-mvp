@@ -1,5 +1,6 @@
 'use client';
 
+import { useState, useEffect } from 'react';
 import { useCart } from '../../../context/cartContext';
 import styles from '../../../styles/links/products/bloomtoy.module.css';
 import Image from 'next/image';
@@ -24,15 +25,34 @@ export default function BloomToy() {
     addToCart(item);
   };
 
+  const [imagePositions, setImagePositions] = useState([]);
+
+  useEffect(() => {
+    const generateRandomPositions = () => {
+      return Array.from({ length: 10 }, () => ({
+        top: `${Math.random() * 90}%`,  // Étend la plage sur presque toute la hauteur
+        left: `${Math.random() * 90}%`, // Étend la plage sur presque toute la largeur
+      }));
+    };    
+    setImagePositions(generateRandomPositions());
+  }, []);
+
   return (
     <div className={styles.productContainer}>
-      <h1>{product.name}</h1>
       <div className={styles.productDetails}>
-        <Image src={product.image} alt={product.name} width={500} height={500} className={styles.productImage} />
+        {imagePositions.map((pos, index) => (
+          <div key={index} className={styles.imageWrapper} style={{ top: pos.top, left: pos.left }}>
+            <Image
+              src={product.image}
+              alt={product.name}
+              width={100}
+              height={100}
+              className={styles.productImage}
+            />
+          </div>
+        ))}
         <div className={styles.productInfo}>
-          <p className={styles.productDescription}>{product.description}</p>
-          <p className={styles.productPrice}>Prix: {product.price.toFixed(2)}€</p>
-          <button className={styles.addToCartButton} onClick={handleAddToCart}>Ajouter au Panier</button>
+          <button className={styles.addToCartButton} onClick={handleAddToCart}>ACCEDER</button>
         </div>
       </div>
     </div>

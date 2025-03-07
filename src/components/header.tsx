@@ -45,7 +45,7 @@ export default function Header() {
             <div className={styles.cartAndConnect}>
                 <div className={styles.cart}>
                     <Links href="/cart" passHref>
-                        <Image src="svg/cart.svg" alt="Cart" width={100} height={30} />
+                        <Image src="/svg/cart.svg" alt="Cart" width={100} height={30} />
                     </Links>
                     <p>panier ({cartItemCount})</p>
                 </div>
