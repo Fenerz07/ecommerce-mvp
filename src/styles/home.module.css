@@ -19,6 +19,7 @@
     align-items: center;
     flex-direction: column;
     padding: 50px 0;
+    text-align: center;
 }
 
 .about h1 {
@@ -43,6 +44,8 @@
     justify-content: space-around;
     align-items: center;
     padding: 50px 0;
+    text-decoration: none;
+    color: #000;
 }
 
 .product {
@@ -51,6 +54,8 @@
     align-items: center;
     width: 20%;
     text-align: center;
+    text-decoration: none;
+    color: #000;
 }
 
 .product h2 {
@@ -120,4 +125,9 @@
     height: auto;
     object-fit: cover;
     object-position: center;
+}
+
+.product a {
+    text-decoration: none;
+    color: inherit;
 }
