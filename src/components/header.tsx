@@ -24,16 +24,16 @@ export default function Header() {
             </div>
             <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>
                 <Links href="/" passHref className={styles.navLink}>
-                    Home
+                    Accueil
                 </Links>
                 <Links href="/about" passHref className={styles.navLink}>
-                    About
+                    Nous
                 </Links>
                 <Links href="/products" passHref className={styles.navLink}>
-                    Products
+                    Produits
                 </Links>
                 <Links href="/contact" passHref className={styles.navLink}>
-                    Contact
+                    Contacter
                 </Links>
             </nav>
             <div className={styles.cartAndConnect}>

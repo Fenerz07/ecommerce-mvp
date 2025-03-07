@@ -6,7 +6,7 @@ export default function Contact() {
       <h1>Contact Us</h1>
       <form className={styles.contactForm}>
         <div className={styles.formGroup}>
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Nom:</label>
           <input type="text" id="name" name="name" required />
         </div>
         <div className={styles.formGroup}>
