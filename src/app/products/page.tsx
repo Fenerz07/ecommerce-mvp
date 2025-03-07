@@ -1,12 +1,7 @@
 import styles from '../../styles/links/products.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const products = [
-  { id: 1, name: 'LetterBag', price: 29.99, image: '/bag.png' },
-  { id: 2, name: 'BloomToy', price: 49.99, image: '/toy.png' },
-  { id: 3, name: 'BloomShirt', price: 19.99, image: '/tshirt.png' },
-];
+import products from '../../data/products.json';
 
 export default function Products() {
   return (

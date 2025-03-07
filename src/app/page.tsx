@@ -48,6 +48,7 @@ export default function Home() {
         </p>
       </div>
       <div className={styles.products}>
+        {/*
         {products
           .map((product, index) => products.find((p) => p.id === index + 1))
           .filter((product) => product !== undefined)
@@ -60,6 +61,14 @@ export default function Home() {
         </Link>
           </div>
         ))}
+        */}
+      </div>
+      <div className={styles.products}>
+        <Link href="/products" passHref>
+          <button className={styles.button}>
+            <p>NOS PRODUITS</p>
+          </button>
+        </Link>
       </div>
       <section className={styles.nouveautes}>
         <h2 className={styles.title}>Les Nouveautés</h2>

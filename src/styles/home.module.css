@@ -131,3 +131,31 @@
     text-decoration: none;
     color: inherit;
 }
+
+/* 2 ème idée de CTA(CalltoAction) pour accéder aux produits*/
+
+.button {
+    padding: 2rem 8rem;
+    margin-bottom: 6rem;
+    background-image: url('/button.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.button a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.button p {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+}

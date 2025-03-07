@@ -55,3 +55,8 @@
   .addToCartButton:hover {
     background-color: #f2f2f2;
   }
+
+  .productCard a {
+    text-decoration: none;
+    color: inherit;
+}
