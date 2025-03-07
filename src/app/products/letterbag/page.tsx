@@ -2,7 +2,7 @@
 
 import { useCart } from '../../../context/cartContext';
 import styles from '../../../styles/links/products/letterbag.module.css';
-import Image from 'next/image';
+//import Image from 'next/image';
 import products from '../../../data/products.json';
 
 export default function LetterBag() {
@@ -26,13 +26,12 @@ export default function LetterBag() {
 
   return (
     <div className={styles.productContainer}>
-      <h1>{product.name}</h1>
+      <video autoPlay loop muted className={styles.video}>
+        <source src="/letterbag.mp4" type="video/mp4" />
+      </video>
       <div className={styles.productDetails}>
-        <Image src={product.image} alt={product.name} width={500} height={500} className={styles.productImage} />
         <div className={styles.productInfo}>
-          <p className={styles.productDescription}>{product.description}</p>
-          <p className={styles.productPrice}>Prix: {product.price.toFixed(2)}€</p>
-          <button className={styles.addToCartButton} onClick={handleAddToCart}>Ajouter au Panier</button>
+          <button className={styles.addToCartButton} onClick={handleAddToCart}>ACCEDER</button>
         </div>
       </div>
     </div>

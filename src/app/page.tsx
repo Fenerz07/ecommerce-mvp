@@ -1,7 +1,7 @@
 import styles from '../styles/home.module.css';
-import Image from 'next/image';
+//import Image from 'next/image';
 import Link from 'next/link';
-import products from '../data/products.json';
+//import products from '../data/products.json';
 
 const nouveautes = [
   {
