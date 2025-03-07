@@ -1,0 +1,23 @@
+[
+    {
+      "id": 1,
+      "name": "LetterBag",
+      "price": 150.00,
+      "image": "/bag.png",
+      "description": "LetterBag est un sac élégant et pratique, parfait pour transporter vos affaires quotidiennes. Fabriqué avec des matériaux de haute qualité, ce sac est durable et stylé."
+    },
+    {
+      "id": 2,
+      "name": "BloomToy",
+      "price": 25.00,
+      "image": "/toy.png",
+      "description": "BloomToy est un jouet fantastique qui apporte de la joie et de l'amusement à tous les enfants. Fabriqué avec des matériaux de haute qualité, ce jouet est sûr et durable."
+    },
+    {
+      "id": 3,
+      "name": "BloomShirt",
+      "price": 59.00,
+      "image": "/tshirt.png",
+      "description": "BloomShirt est un t-shirt confortable et stylé, parfait pour toutes les occasions. Fabriqué avec des matériaux de haute qualité, ce t-shirt est doux et durable."
+    }
+  ]

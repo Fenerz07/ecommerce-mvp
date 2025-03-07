@@ -4,12 +4,18 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import styles from '../styles/header.module.css';
 import Links from 'next/link';
+import { useCart } from '../context/cartContext';
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const { cartItemCount } = useCart();
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
+    };
+
+    const closeMenu = () => {
+        setIsMenuOpen(false);
     };
 
     return (
@@ -23,16 +29,16 @@ export default function Header() {
                 </Links>
             </div>
             <nav className={`${styles.nav} ${isMenuOpen ? styles.open : ''}`}>
-                <Links href="/" passHref className={styles.navLink}>
+                <Links href="/" passHref className={styles.navLink} onClick={closeMenu}>
                     Accueil
                 </Links>
-                <Links href="/about" passHref className={styles.navLink}>
+                <Links href="/about" passHref className={styles.navLink} onClick={closeMenu}>
                     Nous
                 </Links>
-                <Links href="/products" passHref className={styles.navLink}>
+                <Links href="/products" passHref className={styles.navLink} onClick={closeMenu}>
                     Produits
                 </Links>
-                <Links href="/contact" passHref className={styles.navLink}>
+                <Links href="/contact" passHref className={styles.navLink} onClick={closeMenu}>
                     Contacter
                 </Links>
             </nav>
@@ -41,7 +47,7 @@ export default function Header() {
                     <Links href="/cart" passHref>
                         <Image src="svg/cart.svg" alt="Cart" width={100} height={30} />
                     </Links>
-                    <p>panier (--)</p>
+                    <p>panier ({cartItemCount})</p>
                 </div>
                 <div className={styles.connect}>
                     <Links href="/account" passHref>

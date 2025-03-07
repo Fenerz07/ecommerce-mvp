@@ -1,12 +1,7 @@
 import styles from '../styles/home.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
-
-const products = [
-  { src: '/toy.png', alt: 'Product1', title: 'BloomToy', price: 'PRIX' },
-  { src: '/bag.png', alt: 'Product2', title: 'LetterBag', price: 'PRIX' },
-  { src: '/tshirt.png', alt: 'Product3', title: 'BloomShirt', price: 'PRIX' },
-];
+import products from '../data/products.json';
 
 const nouveautes = [
   {
@@ -33,6 +28,7 @@ const nouveautes = [
 ];
 
 export default function Home() {
+
   return (
     <>
       <div className={styles.video}>
@@ -52,13 +48,16 @@ export default function Home() {
         </p>
       </div>
       <div className={styles.products}>
-        {products.map((product, index) => (
+        {products
+          .map((product, index) => products.find((p) => p.id === index + 1))
+          .filter((product) => product !== undefined)
+          .map((product, index) => (
           <div key={index} className={styles.product}>
-            <Link href={`/products/${product.title.toLowerCase()}`} passHref>
-              <Image src={product.src} alt={product.alt} width={300} height={300} />
-              <h2>{product.title}</h2>
-              <p>{product.price}</p>
-            </Link>
+        <Link href={`/products/${product.name.toLowerCase()}`} passHref>
+          <Image src={product.image} alt={product.name.toLowerCase()} width={300} height={300} />
+          <h2>{product.name}</h2>
+          <p>{product.price}€</p>
+        </Link>
           </div>
         ))}
       </div>
