@@ -3,7 +3,7 @@ import styles from '../../styles/links/contact.module.css';
 export default function Contact() {
   return (
     <div className={styles.contactContainer}>
-      <h1>Contact Us</h1>
+      <h1>Contactez-nous</h1>
       <form className={styles.contactForm}>
         <div className={styles.formGroup}>
           <label htmlFor="name">Nom:</label>
@@ -17,7 +17,7 @@ export default function Contact() {
           <label htmlFor="message">Message:</label>
           <textarea id="message" name="message" rows={5} required></textarea>
         </div>
-        <button type="submit" className={styles.submitButton}>Send Message</button>
+        <button type="submit" className={styles.submitButton}>Envoyer</button>
       </form>
     </div>
   );
