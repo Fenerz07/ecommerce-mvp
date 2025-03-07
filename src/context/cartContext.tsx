@@ -2,16 +2,24 @@
 
 import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
+interface CartItem {
+  id: number;
+  name: string;
+  price: number;
+  quantity: number;
+  image: string;
+}
+
 interface CartContextProps {
-  cartItems: any[];
-  addToCart: (item: any) => void;
+  cartItems: CartItem[];
+  addToCart: (item: CartItem) => void;
   cartItemCount: number;
 }
 
 const CartContext = createContext<CartContextProps | undefined>(undefined);
 
 export const CartProvider = ({ children }: { children: ReactNode }) => {
-  const [cartItems, setCartItems] = useState<any[]>([]);
+  const [cartItems, setCartItems] = useState<CartItem[]>([]);
 
   useEffect(() => {
     // Récupérer les articles du panier depuis le localStorage lors du montage du composant
@@ -26,7 +34,7 @@ export const CartProvider = ({ children }: { children: ReactNode }) => {
     localStorage.setItem('cartItems', JSON.stringify(cartItems));
   }, [cartItems]);
 
-  const addToCart = (item: any) => {
+  const addToCart = (item: CartItem) => {
     setCartItems((prevItems) => {
       const existingItem = prevItems.find((cartItem) => cartItem.id === item.id);
       if (existingItem) {

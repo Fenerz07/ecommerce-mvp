@@ -1,14 +1,26 @@
 'use client';
 
-import { useState, useEffect } from 'react';
 import { useCart } from '../../../context/cartContext';
 import styles from '../../../styles/links/products/bloomtoy.module.css';
 import Image from 'next/image';
 import products from '../../../data/products.json';
+import { useState, useEffect } from 'react';
 
 export default function BloomToy() {
   const { addToCart } = useCart();
   const product = products.find((p) => p.id === 2);
+
+  const [imagePositions, setImagePositions] = useState<{ top: string; left: string }[]>([]);
+
+  useEffect(() => {
+    const generateRandomPositions = () => {
+      return Array.from({ length: 10 }, () => ({
+        top: `${Math.random() * 90}%`,  // Étend la plage sur presque toute la hauteur
+        left: `${Math.random() * 90}%`, // Étend la plage sur presque toute la largeur
+      }));
+    };    
+    setImagePositions(generateRandomPositions());
+  }, []);
 
   if (!product) {
     return <div>Product not found</div>;
@@ -24,18 +36,6 @@ export default function BloomToy() {
     };
     addToCart(item);
   };
-
-  const [imagePositions, setImagePositions] = useState([]);
-
-  useEffect(() => {
-    const generateRandomPositions = () => {
-      return Array.from({ length: 10 }, () => ({
-        top: `${Math.random() * 90}%`,  // Étend la plage sur presque toute la hauteur
-        left: `${Math.random() * 90}%`, // Étend la plage sur presque toute la largeur
-      }));
-    };    
-    setImagePositions(generateRandomPositions());
-  }, []);
 
   return (
     <div className={styles.productContainer}>
